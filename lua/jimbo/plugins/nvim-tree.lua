@@ -51,5 +51,5 @@ return {
     })
     -- global
     vim.api.nvim_set_keymap("n", "<C-f>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
-  end,
+  end, 
 }

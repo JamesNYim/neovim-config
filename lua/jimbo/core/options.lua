@@ -1,4 +1,4 @@
-vim.g.maplelader = " "
+vim.g.mapleader = " "
 vim.opt.nu = true
 
 vim.opt.tabstop = 4
@@ -11,3 +11,6 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.opt.incsearch = true
+
+
+vim.keymap.set("n", "<leader>rn", ":set number! relativenumber!<CR>", {silent = true, noremap = true})
