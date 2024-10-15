@@ -9,9 +9,14 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "jimbo.plugins" }, {"import = jimbo.plugins.lsp"}}, {
+plugins = {
+    import = "jimbo.plugins",
+}
+
+opts =  {
   install = {
     colorscheme = { "seoul256" },
   },
@@ -22,4 +27,5 @@ require("lazy").setup({ { import = "jimbo.plugins" }, {"import = jimbo.plugins.l
   change_detection = {
     notify = false,
   },
-})
+}
+require("lazy").setup(plugins , opts)
